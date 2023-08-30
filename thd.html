@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Dibattito THD Patologia Emorroidaria</title>
+<style>
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('copertina.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+ 
+  #scritta{
+    font-size: 24px;
+	font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+  }
+  
+  #scritta2{
+    font-size: 30px;
+	font-weight: bold;
+	color: #F0AA00;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 18px;
+  }
+  #scritta3{
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+  }
+  #countdown {
+    font-size: 44px;
+    font-weight: bold;
+	color: #F0AA00;
+	font-family: Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  
+  #message {
+    font-size: 30px;
+	color: #FFFFFF;
+	font-weight: bold;
+    text-transform: uppercase
+	font-family: Arial, sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+   .lettere {
+    color: #F0AA00; /* Colore delle lettere */
+	 font-size: 24px;
+  }
+
+  .letters {
+    color: #FFFFFF; /* Colore delle lettere */
+	 font-size: 20px;
+	 font-weight: bold;
+	 
+  }
+  
+  .corsivo {
+  font-style: italic;
+ }
+  }
+  
+   
+  
+</style>
+
+</head>
+<body>
+
+
+
+
+
+ <div id="scritta">
+ <br>
+ <br>
+ <br>
+  Dibattito interattivo <br>
+  3 Ottobre alle 13:00
+	
+<div id="scritta2">
+La Patologia Emorroidaria 
+
+</div>
+<div id="scritta3">
+<p class="corsivo">
+
+"Chi conosce tutte <br> le risposte,
+non si è fatto <br> tutte le domande"
+
+</p>
+
+</div>
+  <div id="countdown">
+ 
+    <span id="timer"></span>
+	
+  </div>
+  <div id="message">
+ 
+  TI ASPETTIAMO<br>NON MANCARE!
+  
+    
+  </div>
+
+<script>
+// Calcolo del countdown per il 3 Ottobre alle 13:00
+const targetDate = new Date("October 3, 2023 13:00:00").getTime();
+
+const updateCountdown = () => {
+  const currentDate = new Date().getTime();
+  const timeRemaining = targetDate - currentDate;
+if (timeRemaining <= 0) {
+    clearInterval(countdownInterval); // Fermare l'intervallo quando il countdown raggiunge 0
+    document.getElementById("timer").innerHTML = "Tempo scaduto!";
+  } else {
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  document.getElementById("timer").innerHTML = `${days}<span class="letters"> giorni</span> ${hours}<span class="letters"> ore</span> ${minutes}<span class="letters"> minuti</span> ${seconds}<span class="letters"> secondi</span>`;
+}};
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
+
+
+   
